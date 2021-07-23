@@ -1,0 +1,25 @@
+@import "../../style/variables";
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10vw;
+}
+
+.container {
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 5px;
+  justify-content: space-around;
+  align-items: center;
+  width: 150px;
+  background-color: rgba($color: #ffffff, $alpha: 0.2);
+  cursor: pointer;
+  p {
+    color: $white;
+  }
+  .cross {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,15 @@
+@import "../style/variables";
+
+.indication {
+  color: $white;
+  margin-top: 10vh;
+  font-size: 18px;
+}
+
+.list_container {
+  display: flex;
+  margin-top: 20px;
+  overflow-x: scroll;
+  height: 96%;
+  align-items: start;
+}

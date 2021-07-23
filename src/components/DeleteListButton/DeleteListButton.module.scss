@@ -1,0 +1,20 @@
+@import "../../style/variables";
+
+.delete_button {
+  border-radius: 5px;
+  position: absolute;
+  z-index: 50;
+  background-color: $danger;
+  height: 40px;
+  width: 130px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 30px 14px 20px;
+  display: flex;
+  left: 160px;
+  top: 40px;
+  cursor: pointer;
+  p {
+    color: $white;
+  }
+}
