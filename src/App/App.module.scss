@@ -12,4 +12,9 @@
   overflow-x: scroll;
   height: 96%;
   align-items: start;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
