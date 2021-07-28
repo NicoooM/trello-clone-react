@@ -24,7 +24,6 @@ export default function App() {
     let pos = { left: 0, x: 0 };
     const mouseDownHandler = (e) => {
       mouseDown = true;
-      console.log("down");
       pos = {
         left: container.scrollLeft,
         x: e.clientX,

@@ -31,7 +31,7 @@ export default function List(props) {
   if (createList) {
     return (
       <li className={styles.list_wrapper}>
-        <div className={styles.list}>
+        <form className={styles.list} onSubmit={() => setCreateList(false)}>
           <input
             onChange={(e) => {
               setListTitle(e.target.value);
@@ -74,7 +74,7 @@ export default function List(props) {
               />
             </svg>
           </button>
-        </div>
+        </form>
       </li>
     );
   }
@@ -150,7 +150,7 @@ export default function List(props) {
       {deleteButtonVisible ? (
         <DeleteListButton handleDelete={props.handleDelete} id={props.id} />
       ) : null}
-      <ul>{listItems}</ul>
+      <ul className={styles.list_items}>{listItems}</ul>
     </li>
   );
 }

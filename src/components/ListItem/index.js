@@ -10,43 +10,48 @@ export default function ListItem(props) {
   const [openPopUp, setOpenPopUp] = useState(false);
   if (createListItem) {
     return (
-      <li className={styles.list_item}>
-        <input autoFocus onChange={(e) => setListItemTitle(e.target.value)} />
-        <div className={styles.button_container}>
-          <button
-            className={styles.button_primary}
-            onClick={() => setcreateListItem(false)}
-          >
-            Add
-          </button>
-          <button
-            className={styles.button_delete}
-            onClick={() => props.handleDelete(props.id)}
-          >
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+      <li>
+        <form
+          className={styles.list_item}
+          onSubmit={() => setcreateListItem(false)}
+        >
+          <input autoFocus onChange={(e) => setListItemTitle(e.target.value)} />
+          <div className={styles.button_container}>
+            <button
+              className={styles.button_primary}
+              onClick={() => setcreateListItem(false)}
             >
-              <path
-                d="M6.36401 6.36398L19.0919 19.0919"
-                stroke="#838383"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M6.36401 19.0919L19.0919 6.36397"
-                stroke="#838383"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
+              Add
+            </button>
+            <button
+              className={styles.button_delete}
+              onClick={() => props.handleDelete(props.id)}
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.36401 6.36398L19.0919 19.0919"
+                  stroke="#838383"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M6.36401 19.0919L19.0919 6.36397"
+                  stroke="#838383"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
       </li>
     );
   }
